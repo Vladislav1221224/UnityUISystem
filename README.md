@@ -1,7 +1,7 @@
 # 🎮 Unity Portfolio Project
 This repository contains a Unity project created as part of my portfolio as a Junior Unity Developer. The project showcases my skills in UI system development, C# scripting, and working with core Unity Engine features.
 
-**[Build APK(Full сhangelog in release description)](https://github.com/Vladislav1221224/UnityUISystem/releases/tag/1.0.0)**
+**[Build APK](https://github.com/Vladislav1221224/UnityUISystem/releases/tag/1.0.0)**
 
 ## 📌 About the Project
 **Project Title**: _UISystem_
