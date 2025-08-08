@@ -23,6 +23,7 @@ public class SaveLoadSystem
     #endregion
 
     #region Read
+    //÷е н≥би читаЇ дан≥
     private async Task<GameData> ReadData(IProgress<float> progress)
     {
         float loadTime = 1f;

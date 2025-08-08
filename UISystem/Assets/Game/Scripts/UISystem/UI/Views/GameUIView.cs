@@ -14,7 +14,7 @@ public class GameUIView : MonoBehaviour
 
     public void SetGameTime(float gameSessionTime)
     {
-        _gameSessionTimeText.text = $"Game Time: {gameSessionTime} seconds";
+        _gameSessionTimeText.text = $"{gameSessionTime:F1} sec";
     }
 
     #endregion

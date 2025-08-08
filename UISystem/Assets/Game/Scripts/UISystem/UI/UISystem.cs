@@ -6,11 +6,11 @@ public class UISystem : MonoBehaviour
 {
     #region Properties
 
-    #region Serialized fields
-    [Header("Views")]
+    GameStateMachine _gameStateMachine;
+
+    #region Views
     GameUIView _gameUIView;
     LoadingScreenView _loadingScreenView;
-    GameStateMachine _gameStateMachine;
     #endregion
 
     #region Cache
@@ -25,24 +25,17 @@ public class UISystem : MonoBehaviour
 
     #region Unity methods
 
-    private void Awake()
-    {
-
-    }
-
     private void Start()
     {
         _startGameSessionTime = Time.time;
         _gameStateMachine.StartGame();
     }
-
     private void Update()
     {
-
+        _gameStateMachine.Update();
     }
 
     #endregion
-
 
     [Inject]
     public void Construct(GameUIView gameUIView, LoadingScreenView loadingScreenView, GameStateMachine gameStateMachine)
@@ -60,21 +53,29 @@ public class UISystem : MonoBehaviour
         {
             float sessionTime = Time.time - _startGameSessionTime;
 
-            _gameUIView.SetGameTime(sessionTime);
+            _gameUIView.SetGameTime(Mathf.Round(sessionTime * 10f) / 10f);
         }
     }
 
     #endregion
 
-
     #region Loading screen
 
+    public void ReloadGame()
+    {
+        _gameStateMachine.ReloadGame();
+    }
     public void SetLoadingScreenProgress(float progress)
     {
-        if (_loadingScreenView != null)
-        {
-            _loadingScreenView.SetProgress(progress);
-        }
+        _loadingScreenView.SetProgress(progress);
+    }
+    public void UpdateLoadingScreenProgress(float progress)
+    {
+        _loadingScreenView.UpdateProgress(progress);
+    }
+    public void SetLoadingScreenProcess(string process)
+    {
+        _loadingScreenView.SetProcess($"Process: {process}");
     }
 
     #endregion

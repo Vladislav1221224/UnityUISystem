@@ -11,7 +11,6 @@ public class GamePlayState : FsmState
     #endregion
 
     #region Properties
-    private float _sessionTime;
     private bool _isRunning;
 
     private UISystem _uiSystem;
@@ -30,7 +29,6 @@ public class GamePlayState : FsmState
     {
         Debug.Log("Gameplay started!");
         _menuManager.OpenMenu("Game");
-        _sessionTime = 0f;
         _isRunning = true;
     }
 
@@ -38,7 +36,6 @@ public class GamePlayState : FsmState
     {
         if (_isRunning)
         {
-            _sessionTime += Time.deltaTime;
             _uiSystem.UpdateGameTime();
         }
     }
@@ -46,7 +43,6 @@ public class GamePlayState : FsmState
     public async override Task Exit()
     {
         _isRunning = false;
-        Debug.Log($"Gameplay ended. Total time: {_sessionTime:F2} seconds");
     }
     #endregion
 }
