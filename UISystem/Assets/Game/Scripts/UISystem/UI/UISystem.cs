@@ -27,6 +27,8 @@ public class UISystem : MonoBehaviour
 
     private void Start()
     {
+        SetFPS();// Ставить fps відносно герцовки екрану
+
         _startGameSessionTime = Time.time;
         _gameStateMachine.StartGame();
     }
@@ -80,5 +82,15 @@ public class UISystem : MonoBehaviour
 
     #endregion
 
+    #region Other
+    void SetFPS()
+    {
+        // Нові версії Unity (refreshRateRatio.value дає float)
+        float hz = (float)Screen.currentResolution.refreshRateRatio.value;
+
+        QualitySettings.vSyncCount = 0; // щоб targetFrameRate працював
+        Application.targetFrameRate = (int)hz;
+    }
+    #endregion
     #endregion
 }
