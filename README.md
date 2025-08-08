@@ -1,6 +1,8 @@
 # 🎮 Unity Portfolio Project
 This repository contains a Unity project created as part of my portfolio as a Junior Unity Developer. The project showcases my skills in UI system development, C# scripting, and working with core Unity Engine features.
 
+**[Build APK(Full сhangelog in release description)](https://github.com/Vladislav1221224/UnityUISystem/releases/tag/1.0.0)**
+
 ## 📌 About the Project
 **Project Title**: _UISystem_
 **Description:**  
@@ -22,21 +24,21 @@ Zenject
 
 ### 1. UI System  
 - **Loading Screen:**  
-  - Відображає прогрес завантаження та поточний процес  
+  - Displays loading progress and current process  
 - **Game UI:**  
-  - Виводить час ігрової сесії  
+  - Shows game session time  
 
 ### 2. SaveLoad System  
 - **LoadGameData:**  
-  - Затримка 1 секунда  
-  - Повертає нові дані `GameData()`  
+  - 1-second delay  
+  - Returns new `GameData()`  
 
 ### 3. GameStateMachine  
 - **LoadingState:**  
-  - Відображення екрану завантаження  
-  - Завантаження ігрових даних  
-  - Ініціалізація ігрового стану (затримка 1 секунда)  
-  - Закриття екрану завантаження  
-  - Перехід у `GamePlayState`  
+  - Displays loading screen  
+  - Loads game data  
+  - Initializes game state (1-second delay)  
+  - Closes loading screen  
+  - Switches to `GamePlayState`  
 - **GamePlayState:**  
-  - Виводить у UI час ігрової сесії  
+  - Displays game session time in UI  
