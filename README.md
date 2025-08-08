@@ -5,6 +5,7 @@ This repository contains a Unity project created as part of my portfolio as a Ju
 
 ## 📌 About the Project
 **Project Title**: _UISystem_
+
 **Description:**  
 This project was built to demonstrate the following Unity skills:
 - C# scripting
@@ -15,8 +16,8 @@ This project was built to demonstrate the following Unity skills:
 - Scene and object management
 
 ## 🔧 Tools & Technologies
-Unity 6000.0.40f1
-Zenject
+- Unity 6000.0.40f1
+- Zenject
 
 
 
